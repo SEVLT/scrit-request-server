@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>首页</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<h5>您的余额是：<span id="amount">&&&amount&&&</span>元</h5>
+		<button id="button">付款1元</button>
+		<script>
+			button.addEventListener('click', () => {
+				let script = document.createElement('script');
+				script.src = './pay';
+				document.body.appendChild(script);
+				script.onload = function (e) {
+					e.currentTarget.remove();
+				};
+			});
+		</script>
+		<!-- <script src="/main.js?callback=xxx"></script> -->
+	</body>
+</html>
